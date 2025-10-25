@@ -1,0 +1,64 @@
+-
+  slug: hyperloop
+  artist: Valknar
+  title: Hyperloop
+  default: true
+  tracks:
+    - Hyperloop I.mp3
+    - Hyperloop II.mp3
+    - Hyperloop III.mp3
+    - Hyperloop IV.mp3
+    - Hyperloop IX.mp3
+    - Hyperloop V.mp3
+    - Hyperloop VI.mp3
+    - Hyperloop VII.mp3
+    - Hyperloop VIII.mp3
+    - Hyperloop X.mp3
+    - Hyperloop XI.mp3
+    - Hyperloop XII.mp3
+    - Hyperloop.mp3
+-
+  slug: massive
+  artist: Valknar
+  title: Massive
+  tracks:
+    - Massive.mp3
+    - Sudden Death.mp3
+    - Strength And Honour.mp3
+    - Drums Of War.mp3
+    - Drums Of War (Remix).mp3
+    - Massive (Remix).mp3
+    - The Moon (Remix).mp3
+-
+  slug: pass-the-glock
+  artist: Terror Squad
+  title: Pass The Glock
+  tracks:
+    - Pass The Glock - Bulletproof Remix.mp3
+-
+  slug: detroit
+  artist: Valknar
+  title: Detroit
+  tracks:
+    - Detroit I.mp3
+    - Detroit II.mp3
+    - Detroit III.mp3
+    - Detroit IV.mp3
+    - Detroit V.mp3
+    - Detroit VI.mp3
+    - Detroit VII.mp3
+    - Detroit VIII.mp3
+-
+  slug: stuttgart
+  artist: Valknar
+  title: Stuttgart
+  tracks:
+    - Stuttgart.mp3
+    - Stuttgart (Remix).mp3
+
+-
+  slug: changed-her-mind-again
+  artist: Cold Stares
+  title: Changed Her Mind Again... - Breaks Remix
+  tracks:
+    - Changed Her Mind Again... - Breaks Remix.mp3

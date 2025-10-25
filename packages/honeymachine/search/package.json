@@ -1,0 +1,70 @@
+{
+	"name": "@honeymachine/search",
+	"version": "1.0.0",
+	"description": "A search component for the modern web",
+	"type": "module",
+	"main": "lib/index.js",
+	"module": "lib/index.js",
+	"files": [
+		"src",
+		"lib",
+		"module",
+		"tsconfig.json"
+	],
+	"publishConfig": {
+		"access": "public"
+	},
+	"scripts": {
+		"clean": "rm -rf lib module",
+		"test": "exit 0",
+		"build:tsc": "tsc -d",
+		"watch:tsc": "tsc -d -w",
+		"build:rollup": "rollup -c",
+		"watch:rollup": "rollup -c -w",
+		"build": "pnpm run build:tsc & pnpm run build:rollup & wait",
+		"watch": "pnpm run watch:tsc & pnpm run watch:rollup",
+		"serve": "serve -l 3337",
+		"dev": "pnpm run watch & pnpm run serve",
+		"preversion": "sed -i '' -E 's:^(lib|docs/assets/hm-\\*)$:#<removed temporarily>\\1:' .gitignore",
+		"version": "pnpm run build && git add .",
+		"postversion": "sed -i '' -E 's:^#<removed temporarily>(lib|docs/assets/hm-\\*)$:\\1:' .gitignore && git rm --cached -r lib docs/assets/hm-* && git add . && git commit -m 'Restore preversion .gitignore'",
+		"prepack": "pnpm run clean && pnpm run build"
+	},
+	"author": "Sebastian Krüger <sk@honeymachine.io> (https://honeymachine.io/)",
+	"license": "GPL-3.0",
+	"dependencies": {
+		"@hydecorp/component": "^1.0.0",
+		"@types/w3c-css-typed-object-model-level-1": "20180410.0.4",
+		"lunr": "^2.3.9"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/honeymachine/search.git"
+	},
+	"bugs": {
+		"url": "https://github.com/honeymachine/search/issues"
+	},
+	"homepage": "https://honeymachine.github.io/search/",
+	"tags": [
+		"search",
+		"touch-events",
+		"swipe-gestures",
+		"webcomponent",
+		"jquery",
+		"rxjs",
+		"pivoine",
+		"jquery-plugin",
+		"vanilla-js",
+		"search-layout",
+		"custom-element",
+		"vanilla",
+		"web-components",
+		"ui-component",
+		"reactive",
+		"menu",
+		"menu-navigation"
+	],
+	"devDependencies": {
+		"@types/lunr": "^2.3.7"
+	}
+}

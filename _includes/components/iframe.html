@@ -1,0 +1,3 @@
+{% assign src = include.iframe.src | default:include.iframe.path %}
+
+<iframe src="{% include_cached smart-url url=src %}" width="100%" frameborder="no" scrolling="no" allowfullscreen="true" style="width: 100%; aspect-ratio: calc(16/9);"></iframe>

@@ -1,0 +1,7 @@
+{% if site.pivoine.dark_mode.dynamic %}
+<script>
+  window._sunrise = {{ site.pivoine.dark_mode.sunrise | default:"6"  }};
+  window._sunset =  {{ site.pivoine.dark_mode.sunset  | default:"18" }};
+  {% include scripts/dark-mode.min.js %}
+</script>
+{% endif %}

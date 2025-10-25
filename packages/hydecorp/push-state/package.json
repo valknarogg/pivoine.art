@@ -1,0 +1,69 @@
+{
+	"name": "@hydecorp/push-state",
+	"version": "1.0.0",
+	"description": "Turn static web sites into dynamic web apps",
+	"type": "module",
+	"main": "lib/index.js",
+	"module": "lib/index.js",
+	"files": [
+		"src",
+		"lib",
+		"module",
+		"tsconfig.json"
+	],
+	"publishConfig": {
+		"access": "public"
+	},
+	"scripts": {
+		"clean": "rm -rf lib module",
+		"test": "exit 0",
+		"build:tsc": "tsc -d",
+		"watch:tsc": "tsc -d -w",
+		"build:rollup": "rollup -c",
+		"watch:rollup": "rollup -c -w",
+		"build": "pnpm run build:tsc & pnpm run build:rollup & wait",
+		"watch": "pnpm run watch:tsc & pnpm run watch:rollup",
+		"serve": "serve -l 3337",
+		"dev": "pnpm run watch & pnpm run serve",
+		"preversion": "sed -i '' -E 's:^(lib|docs/assets/hy-\\*)$:#<removed temporarily>\\1:' .gitignore",
+		"version": "pnpm run build && git add .",
+		"postversion": "sed -i '' -E 's:^#<removed temporarily>(lib|docs/assets/hy-\\*)$:\\1:' .gitignore && git rm --cached -r lib docs/assets/hy-* && git add . && git commit -m 'Restore preversion .gitignore'",
+		"prepack": "pnpm run clean && pnpm run build"
+	},
+	"author": "Florian Klampfer <mail@qwtel.com> (https://qwtel.com/)",
+	"license": "GPL-3.0",
+	"dependencies": {
+		"@hydecorp/component": "^1.0.0",
+		"@types/resize-observer-browser": "^0.1.7"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/hydecorp/push-state.git"
+	},
+	"bugs": {
+		"url": "https://github.com/hydecorp/push-state/issues"
+	},
+	"homepage": "https://hydecorp.github.io/push-state/",
+	"keywords": [
+		"page-transitions",
+		"ajax",
+		"pjax",
+		"smoothstate",
+		"pivoine",
+		"vanilla",
+		"jquery",
+		"animations",
+		"rxjs",
+		"vanilla-js",
+		"custom-element",
+		"jquery-plugin",
+		"history-api",
+		"web-components",
+		"webcomponent",
+		"history-management",
+		"prefetch",
+		"page-loader",
+		"prefetcher",
+		"reactive"
+	]
+}

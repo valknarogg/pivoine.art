@@ -1,0 +1,70 @@
+{
+	"name": "@hydecorp/drawer",
+	"version": "1.0.0",
+	"description": "A touch-enabled drawer component for the modern web",
+	"type": "module",
+	"main": "lib/index.js",
+	"module": "lib/index.js",
+	"files": [
+		"src",
+		"lib",
+		"module",
+		"tsconfig.json"
+	],
+	"publishConfig": {
+		"access": "public"
+	},
+	"scripts": {
+		"clean": "rm -rf lib module",
+		"test": "exit 0",
+		"build:tsc": "tsc -d",
+		"watch:tsc": "tsc -d -w",
+		"build:rollup": "rollup -c",
+		"watch:rollup": "rollup -c -w",
+		"build": "pnpm run build:tsc & pnpm run build:rollup & wait",
+		"watch": "pnpm run watch:tsc & pnpm run watch:rollup",
+		"serve": "serve -l 3337",
+		"dev": "pnpm run watch & pnpm run serve",
+		"preversion": "sed -i '' -E 's:^(lib|docs/assets/hy-\\*)$:#<removed temporarily>\\1:' .gitignore",
+		"version": "pnpm run build && git add .",
+		"postversion": "sed -i '' -E 's:^#<removed temporarily>(lib|docs/assets/hy-\\*)$:\\1:' .gitignore && git rm --cached -r lib docs/assets/hy-* && git add . && git commit -m 'Restore preversion .gitignore'",
+		"prepack": "pnpm run clean && pnpm run build"
+	},
+	"author": "Florian Klampfer <mail@qwtel.com> (https://qwtel.com/)",
+	"license": "GPL-3.0",
+	"dependencies": {
+		"@hydecorp/component": "^1.0.0",
+		"@types/resize-observer-browser": "^0.1.7",
+		"@types/w3c-css-typed-object-model-level-1": "20180410.0.4"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/hydecorp/drawer.git"
+	},
+	"bugs": {
+		"url": "https://github.com/hydecorp/drawer/issues"
+	},
+	"homepage": "https://hydecorp.github.io/drawer/",
+	"tags": [
+		"drawer",
+		"touch-events",
+		"swipe-gestures",
+		"webcomponent",
+		"jquery",
+		"rxjs",
+		"pivoine",
+		"jquery-plugin",
+		"vanilla-js",
+		"drawer-layout",
+		"custom-element",
+		"vanilla",
+		"web-components",
+		"ui-component",
+		"reactive",
+		"menu",
+		"menu-navigation"
+	],
+	"devDependencies": {
+		"rollup": "^4.40.1"
+	}
+}

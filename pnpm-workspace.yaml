@@ -1,0 +1,7 @@
+onlyBuiltDependencies:
+  - core-js
+linkWorkspacePackages: true
+packages:
+  # Add paths to each package's folder, or glob patterns
+  - 'packages/hydecorp/*'
+  - 'packages/honeymachine/*'

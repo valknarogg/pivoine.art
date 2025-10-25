@@ -1,0 +1,18 @@
+{% comment %}<!--
+Including `seo` in a partial prevents a parse error when `jekyll-seo-tag` is not included
+-->{% endcomment %}
+{% seo %}
+
+{% if page.accent_video %}
+<meta property="og:video" content="{{ page.accent_video | absolute_url }}" />
+{% endif %}
+
+{% if site.pivoine.sound and page.sound %}
+<meta property="og:type" content="music.album" />
+{% assign sounds = site.data.sounds | where: 'slug', page.sound %}
+{% for track in sounds.first.tracks %}
+{% assign track_url = "/assets/sounds/" | append:page.sound | append:"/" | append: track" %}
+<meta property="music:song" content="{{ track_url | absolute_url }}" />
+<meta property="music:song:track" content="{{ forloop.index + 1 }}" />
+{% endfor %}
+{% endif %}

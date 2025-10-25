@@ -1,0 +1,16 @@
+_site
+
+node_modules
+vendor
+.bundle
+.sass-cache
+.jekyll-metadata
+.jekyll-cache
+.ruby-lsp
+*.gem
+
+#<removed/js>
+#<removed/css>
+
+# assets
+assets/js

@@ -1,0 +1,32 @@
+{
+	"name": "@hydecorp/component",
+	"version": "1.0.0",
+	"description": "",
+	"type": "module",
+	"main": "lib/index.js",
+	"module": "lib/index.js",
+	"files": [
+		"src",
+		"lib",
+		"typings",
+		"tsconfig.json"
+	],
+	"publishConfig": {
+		"access": "public"
+	},
+	"scripts": {
+		"clean": "rm -rf lib",
+		"test": "exit 0",
+		"build": "tsc --outDir lib",
+		"watch": "tsc --outDir lib -w",
+		"prepack": "pnpm run clean && pnpm run build"
+	},
+	"dependencies": {
+		"@types/resize-observer-browser": "^0.1.7"
+	},
+	"author": "Florian Klampfer <mail@qwtel.com> (https://qwtel.com/)",
+	"license": "MIT",
+	"devDependencies": {
+		"typescript": "^4.5.5"
+	}
+}

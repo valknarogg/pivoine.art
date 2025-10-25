@@ -1,0 +1,20 @@
+# Logs
+logs
+*.log
+
+# Dependency directory
+# https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
+node_modules
+
+# Remove some common IDE working directories
+.idea
+.vscode
+
+# macOS
+.DS_Store
+
+# Packages
+*.tgz
+
+# Build artifacts
+lib

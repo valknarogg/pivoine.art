@@ -1,0 +1,9 @@
+@use '../_mixins.scss';
+@forward '../_vars.scss' show $namespace-prefix;
+@use '../_vars.scss';
+
+.#{vars.$namespace-prefix}-box {
+  &[data-animation='fade'][data-state='hidden'] {
+    opacity: 0;
+  }
+}
