@@ -211,10 +211,6 @@ pivoine:
 
   sound: true
 
-  umami:
-    script: https://umami.pivoine.art/script.js
-    id: 26158eb8-e0ae-4985-aa91-2f4a652f8ccb
-
   # ⚡️ DANGER ZONE ⚡️
   # ----------------
   # This is an _experimental_ feature.
