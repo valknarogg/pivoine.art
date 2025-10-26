@@ -209,6 +209,8 @@ pivoine:
   search:
     icon: true
 
+  umami: false
+
   sound: true
 
   # ⚡️ DANGER ZONE ⚡️
